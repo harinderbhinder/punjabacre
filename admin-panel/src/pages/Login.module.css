@@ -1,0 +1,105 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f6fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.icon { font-size: 48px; margin-bottom: 8px; }
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #1e1e2e;
+}
+
+.sub { color: #888; margin: 0 0 24px; font-size: 14px; }
+
+.error {
+  background: #fff0f0;
+  border: 1px solid #ffcccc;
+  color: #cc0000;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.form { display: flex; flex-direction: column; gap: 16px; text-align: left; }
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.field input:focus { border-color: #6c63ff; }
+
+.passWrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border 0.2s;
+}
+
+.passWrap:focus-within { border-color: #6c63ff; }
+
+.passWrap input {
+  flex: 1;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+.passWrap button {
+  background: none;
+  border: none;
+  padding: 0 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit {
+  padding: 12px;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit:hover:not(:disabled) { background: #5a52e0; }
+.submit:disabled { opacity: 0.6; cursor: not-allowed; }
