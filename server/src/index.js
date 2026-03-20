@@ -28,16 +28,7 @@ app.use(helmet({
 // Prevent NoSQL injection
 app.use(mongoSanitize());
 
-app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (mobile apps, curl) or any localhost origin
-    if (!origin || origin.startsWith('http://localhost') || origin.startsWith('http://127.0.0.1')) {
-      return callback(null, true);
-    }
-    callback(new Error('Not allowed by CORS'));
-  },
-  credentials: true,
-}));
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ limit: '10kb' })); // limit body size
 
 // Global rate limit
